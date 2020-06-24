@@ -13,7 +13,7 @@ function MyTabs() {
     <Tab.Navigator
       initialRouteName="Profile"
       tabBarOptions={{
-        activeTintColor: '#e91e63',
+        activeTintColor: '#40b8f5',
       }}
     >
       <Tab.Screen

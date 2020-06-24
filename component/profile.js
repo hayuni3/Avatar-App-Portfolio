@@ -48,7 +48,7 @@ class Profile extends Component {
             //console.log(JSON.stringify(this.state));
             if (this.state.remember) {
                 SecureStore.setItemAsync('userinfo', JSON.stringify(
-                    {username: this.state.username, password: this.state.password}))
+                    {username: this.state.username, password: this.state.password,  _id: response._id,  uri: response.uri}))
                     .catch(error => console.log('Could not save user info', error));
             } else {
                 SecureStore.deleteItemAsync('userinfo')
@@ -59,10 +59,8 @@ class Profile extends Component {
         }
       })
       .catch(
-            
           error => console.log('In catch:' + error) // alert("Error " + error)
       )
-    
   }
 
   componentDidMount() {
@@ -122,16 +120,15 @@ class Profile extends Component {
                 <Button
                     onPress={() => this.props.navigation.navigate('SignUp')}
                     title='Sign Up'
-                    type='clear'
                     icon={
                         <Icon
                             name='user-plus'
                             type='font-awesome'
-                            color='blue'
+                            color='#fff'
                             iconStyle={{marginRight: 10}}
                         />
                     }
-                    titleStyle={{color: 'blue'}}
+                    buttonStyle={{backgroundColor: '#159aed'}}
                 />
             </View>
         </View>

@@ -101,7 +101,7 @@ class SignUp extends Component {
                 <View style={styles.container}>
                     <Input
                         placeholder='Username'
-                        leftIcon={{type: 'font-awesome', name: 'user-o'}}
+                        leftIcon={{type: 'font-awesome', name: 'user'}}
                         onChangeText={username => this.setState({username})}
                         value={this.state.username}
                         containerStyle={styles.formInput}
@@ -109,7 +109,7 @@ class SignUp extends Component {
                     />
                     <Input
                         placeholder='Password'
-                        leftIcon={{type: 'font-awesome', name: 'key'}}
+                        leftIcon={{type: 'font-awesome', name: 'unlock-alt'}}
                         onChangeText={password => this.setState({password})}
                         value={this.state.password}
                         containerStyle={styles.formInput}
@@ -135,7 +135,7 @@ class SignUp extends Component {
                     */}
                     <Input
                         placeholder='Email'
-                        leftIcon={{type: 'font-awesome', name: 'envelope-o'}}
+                        leftIcon={{type: 'font-awesome', name: 'envelope'}}
                         onChangeText={email => this.setState({email})}
                         value={this.state.email}
                         containerStyle={styles.formInput}
@@ -153,7 +153,7 @@ class SignUp extends Component {
                                     iconStyle={{marginRight: 10}}
                                 />
                             }
-                            buttonStyle={{backgroundColor: '#5637DD'}}
+                            buttonStyle={{backgroundColor: '#159aed'}}
                         />
                     </View>
                 </View>
@@ -172,10 +172,10 @@ const styles = StyleSheet.create({
         marginRight: 10
     },
     formInput: {
-        padding: 8
+        padding: 4
     },
     formCheckbox: {
-        margin: 8,
+        margin: 4,
         backgroundColor: null
     },
     formButton: {
