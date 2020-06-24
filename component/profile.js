@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import { Image, View, Text, StyleSheet, ScrollView} from 'react-native'; 
 import { Input, CheckBox, Button, Icon } from 'react-native-elements';
 import * as SecureStore from 'expo-secure-store';
-//import * as ImagePicker from 'expo-image-picker';
-//import * as Permissions from 'expo-permissions';
-//import * as ImageManipulator from "expo-image-manipulator"; 
-//import { createBottomTabNavigator } from 'react-navigation';
-//import { baseUrl } from '../shared/baseUrl';
+
 
 class Profile extends Component {
     constructor(props) {
@@ -18,18 +14,6 @@ class Profile extends Component {
           remember: false
       };
   }
-  /*
-  static navigationOptions = {
-    title: 'Login',
-    tabBarIcon: ({tintColor}) => (
-        <Icon
-            name='sign-in'
-            type='font-awesome'
-            iconStyle={{color: tintColor}}
-        />
-    )
-  }
-  */
   handleLogin = () => {
     fetch("http://192.168.4.42:3001/users/login", {
           method: "POST",
